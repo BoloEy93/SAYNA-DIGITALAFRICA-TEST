@@ -1,0 +1,2 @@
+# SAYNA-DIGITALAFRICA-TEST
+Sayna digital test 2022
