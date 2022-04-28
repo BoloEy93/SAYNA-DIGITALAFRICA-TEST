@@ -64,37 +64,37 @@ p{
     justify-content:  space-around;
 }
 
-nav{
+#nav-menu>nav{
     width: 100%;
 }
 
-nav>div{
+#nav-menu>nav>div{
     display: inline-flex;
     width: 40%;
     align-self: auto;
     justify-content: right;
 }
 
-nav>div>img{
+#nav-menu>nav>div>img{
     display: inline;    
     align-self: center;
     margin: 10px;
 }
 
-nav>ul{
+#nav-menu>nav>ul{
     display: inline-flex;
     width: 50%;
     align-self: center;
     float: right;
 }
 
-li{ 
+#nav-menu>nav>ul>li{ 
     margin: 0 10px;
     padding: 0 20px;
     display: inline-block;
 }
 
-nav > ul > li > a{
+#nav-menu>nav > ul > li > a{
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -349,61 +349,127 @@ input[type=checkbox], label{
 
 
 footer{
+    
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
+    align-items: center;
     background-color: black;
     min-height: 200px;
 }
 
 #navfoot{
-    margin: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    width: auto;
     height: 75px;
     background-color: unset;
-    justify-content:  flex-start;
-    font-size: smaller;
     font-family: "MontserratReg";
 }
 
 #navfoot > nav{
+    flex-direction: row;
     width: 100%;
-    flex-direction: column;
-    justify-items: flex-start;
+    align-items: flex-start;
+    justify-items: center;
 }
 
 #navfoot >nav > #logo{
-    flex:0;
-    display: inline-flex;
-    width: 30%;
+    flex:1;
+    display: inline;
+    width: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding: 10px;
+    resize: horizontal;
 }
 
 #navfoot> nav> #navlist1{
-    flex: 2;
+    flex: 1;
+    list-style-type: none;
+    width: 30%;
+    display: inline-flex;
+    justify-items: left;
+}
+
+#navfoot> nav> #navlist2{
+    flex: 1;
+    list-style-type: none;
     width: 30%;
     display: inline-flex;
 }
 
+#navlist1>li, #navlist1>li>a{
+    text-decoration: none;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#navlist2>li, #navlist2>li>a{
+    text-decoration: none;
+    margin: 10px;
+    justify-content: space-between;
+}
+
 #navfoot> nav > div{
-    display: inline;
+    flex: 1;
+    display: block;
     height : 25%;
     width  : 20%;
     align-self: center;
 }
 
-#navfoot> nav> #navlist2{
-    flex: 2;
-    width: 30%;
-    display: inline-flex;
+select{
+    display: inline-block;
+    width: fit-content;
+    background-color: #B11313;
 }
 
 #footicons>div>img{
     background-color: #B11313;
 }
 
+/* responsive */
+@media screen and (max-width: 600px) {
+    *{
+        box-sizing: border-box;
 
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #nav-menu>nav>ul{
+        visibility: hidden;
+    }
+
+    div>img{
+        display: inline-block;
+        width: 50%;
+    }
+
+    #div2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div>div{
+        align-items: flex-start;
+        flex: content;
+    }
+
+
+}
 
